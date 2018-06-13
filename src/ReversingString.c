@@ -21,35 +21,36 @@ int getStringLength(char *str)
 
 }
 
-char getReverseString(char *str)
+char *getReverseString(char *str)
 {
 	
-/*	if (str == 0 || str == '\0')
+	if (str == 0 || str == '\0')
   {
     return 0;
   }
   else
-  {*/
+  {
 	int count = 0,last = 0, start = 0;
-	char rev[100] ;
+	char revtemp[100] = {0};
+  char *rev;
 	
 	while( str[count] != '\0' )
 	{
 		count++;
 	}
-	printf("number of string %d",count);
+//	printf("number of string %d",count);
 	
 	last = count -1 ;
 	
 	for(int start = 0 ; start < count ; start++)
 	{
-		rev[start] = str[last];
+		revtemp[start] = str[last];
 		last--;
 	}
 	
 //	prinf("the reverse string is ",rev);
-	rev[start] = '\0';
+	rev = revtemp;
 	
 	return rev; 	
- // }
+  }
 }
